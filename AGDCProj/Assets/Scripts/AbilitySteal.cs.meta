@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: d06ee807ac64e0b4fade04ba1e494131
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - beam: {fileID: 8788615330898978117, guid: 9bcc998a5c1bd0048906e71b86fd7e0c, type: 3}
+  - beamSpawn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
