@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5651643611860637016}
   - component: {fileID: 5688556434381402996}
   - component: {fileID: 1097712793944682956}
+  - component: {fileID: 3562581685229843043}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -149,6 +150,10 @@ MonoBehaviour:
   proj: {fileID: 776825386496447186, guid: 7e9f01a065ec18e40bad91a5a9d5c463, type: 3}
   projSpawn: {fileID: 5796423735286039923}
   ability1: 0
+  laserPrefab: {fileID: 776825386496447186, guid: 7e9f01a065ec18e40bad91a5a9d5c463,
+    type: 3}
+  projectileSpeed: 10
+  projectileFiringPeriod: 0.1
 --- !u!114 &1097712793944682956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,3 +169,24 @@ MonoBehaviour:
   proj: {fileID: 6004743840326193766, guid: 71fa7ebe23b6c4b44b7bdda97be9679b, type: 3}
   projSpawn: {fileID: 5796423735286039923}
   ability2: 0
+  laserPrefab: {fileID: 6004743840326193766, guid: 71fa7ebe23b6c4b44b7bdda97be9679b,
+    type: 3}
+  projectileSpeed: 10
+  projectileFiringPeriod: 0.1
+--- !u!114 &3562581685229843043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635559026922898938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1191de17e645cf046aae2f4bb81d4941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  laserPrefab: {fileID: 0}
+  projectileSpeed: 10
+  projectileFiringPeriod: 0.1
+  padding: 1

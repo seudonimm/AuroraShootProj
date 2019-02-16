@@ -60,10 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Node.cs" />
     <Compile Include="Assets\Scripts\AbilitySteal.cs" />
     <Compile Include="Assets\Scripts\Beam.cs" />
     <Compile Include="Assets\Scripts\Enemy1Ability.cs" />
     <Compile Include="Assets\Scripts\Enemy2Ability.cs" />
+    <Compile Include="Assets\Scripts\Playerr.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Jawad/Documents/GitHub/AuroraShootProj/AGDCProj/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

@@ -8,6 +8,13 @@ public class Enemy2Ability : MonoBehaviour
     public Transform projSpawn;
 
     public bool ability2;
+
+    [SerializeField] GameObject laserPrefab;
+    [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] float projectileFiringPeriod = 0.1f;
+
+    Coroutine firingCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +24,41 @@ public class Enemy2Ability : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Fire();
+        //if (ability1 == true) {
+        //    if (Input.GetMouseButton(0))
+        //    {
+        //        Instantiate(proj, projSpawn.position, projSpawn.rotation);
 
+        //    }
+        //}
+    }
+
+    private void Fire()
+    {
         if (ability2 == true)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
-                Instantiate(proj, projSpawn.position, projSpawn.rotation);
-
+                firingCoroutine = StartCoroutine(FireContinuously());
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                StopCoroutine(firingCoroutine);
             }
         }
+    }
+
+    IEnumerator FireContinuously()
+    {
+
+
+        while (true)
+        {
+            GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+            yield return new WaitForSeconds(projectileFiringPeriod);
+        }
+
     }
 }
