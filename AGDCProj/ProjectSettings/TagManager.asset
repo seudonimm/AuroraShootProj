@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Enemy1
   - Enemy2
+  - Bullet
+  - Projectile Player
+  - Projectile Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Beam
+  - Projectile Enemy
+  - Player
+  - Enemy
+  - Projectile Player
   - 
   - 
   - 

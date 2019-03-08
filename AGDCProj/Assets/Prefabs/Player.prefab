@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5796423735286039923}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BeamSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,8 @@ GameObject:
   - component: {fileID: 5688556434381402996}
   - component: {fileID: 1097712793944682956}
   - component: {fileID: 3562581685229843043}
-  m_Layer: 0
+  - component: {fileID: 1549287892693948003}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -190,3 +191,19 @@ MonoBehaviour:
   projectileSpeed: 10
   projectileFiringPeriod: 0.1
   padding: 1
+--- !u!58 &1549287892693948003
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635559026922898938}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.15

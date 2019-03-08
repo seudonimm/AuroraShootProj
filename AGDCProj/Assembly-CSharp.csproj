@@ -64,11 +64,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AbilitySteal.cs" />
     <Compile Include="Assets\Scripts\Beam.cs" />
+    <Compile Include="Assets\Scripts\CircleShot.cs" />
+    <Compile Include="Assets\Scripts\DamageDealer.cs" />
+    <Compile Include="Assets\Scripts\DeleteBox.cs" />
     <Compile Include="Assets\Scripts\Enemy1Ability.cs" />
     <Compile Include="Assets\Scripts\Enemy2Ability.cs" />
+    <Compile Include="Assets\Scripts\EnemyProjectile.cs" />
+    <Compile Include="Assets\Scripts\Enemyy.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\PathFollower.cs" />
+    <Compile Include="Assets\Scripts\PlayerProjectile.cs" />
     <Compile Include="Assets\Scripts\Playerr.cs" />
+    <Compile Include="Assets\Scripts\TripleShot.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Jawad/Documents/GitHub/AuroraShootProj/AGDCProj/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Playerr : MonoBehaviour
 {
@@ -70,5 +71,15 @@ public class Playerr : MonoBehaviour
 
 
         transform.position = new Vector2(newXPos, newYPos);
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Projectile Enemy"))
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene("Game");
+        }
+
     }
 }

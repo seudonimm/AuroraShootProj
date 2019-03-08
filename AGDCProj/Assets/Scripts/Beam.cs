@@ -6,11 +6,14 @@ public class Beam : MonoBehaviour
 {
     public float speed;
 
-    
+    [SerializeField] GameObject shot;
+    [SerializeField] GameObject shooter;
+
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = transform.up * speed;
+
     }
 
     // Update is called once per frame
