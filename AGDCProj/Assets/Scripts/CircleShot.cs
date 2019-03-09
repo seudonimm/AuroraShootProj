@@ -47,11 +47,6 @@ public class CircleShot : MonoBehaviour
 
     }
 
-    void Expand()
-    {
-        
-    }
-
     void Fire()
     {
         //float radius = 2f;
