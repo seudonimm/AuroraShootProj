@@ -23,6 +23,14 @@ public class PathFollower : MonoBehaviour
     void Start()
     {
         PathNode = GetComponentsInChildren<Node>();
+
+
+        for(int i = 0; i < PathNode.Length -1; i++)
+        {
+            
+            Debug.Log(i);
+        }
+
         CheckNode();
 
     }
@@ -44,7 +52,6 @@ public class PathFollower : MonoBehaviour
     {
         for(int i = 0; i < PathNode.Length - 1; i++)
         {
-
             Debug.DrawLine(PathNode[i].transform.position, PathNode[i+1].transform.position, Color.green);
 
         }

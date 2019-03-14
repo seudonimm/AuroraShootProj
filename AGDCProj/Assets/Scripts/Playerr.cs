@@ -78,7 +78,7 @@ public class Playerr : MonoBehaviour
         if (col.gameObject.CompareTag("Projectile Enemy"))
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Current");
         }
 
     }
