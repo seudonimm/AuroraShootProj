@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4484322941662805388}
   - component: {fileID: 3720320118496102044}
   - component: {fileID: 6780815773982763134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  shot: {fileID: 8923768951396113960, guid: ef96edf173f93d3469acea63ecb4e0c0, type: 3}
+  shooter: {fileID: 8635559026922898938, guid: d28552e1a990dd74488403bc65019bfd, type: 3}
 --- !u!50 &6780815773982763134
 Rigidbody2D:
   serializedVersion: 4
@@ -139,6 +141,6 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

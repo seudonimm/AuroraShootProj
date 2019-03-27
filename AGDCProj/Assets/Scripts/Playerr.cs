@@ -26,7 +26,7 @@ public class Playerr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Fire();
+        Fire();
         Move();
     }
 
@@ -70,5 +70,14 @@ public class Playerr : MonoBehaviour
 
 
         transform.position = new Vector2(newXPos, newYPos);
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Projectile Enemy"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
