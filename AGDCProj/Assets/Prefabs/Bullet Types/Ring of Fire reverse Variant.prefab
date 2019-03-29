@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5807683925064851501, guid: 05abbf35c0f9489409ab6a3bf40833b2,
         type: 3}
       propertyPath: m_Name
-      value: Ring of Fire reverse
+      value: Ring of Fire reverse Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5807683925064851500, guid: 05abbf35c0f9489409ab6a3bf40833b2,
         type: 3}
@@ -82,6 +82,12 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 5538373235122884724}
+    - target: {fileID: 5807683925064851491, guid: 05abbf35c0f9489409ab6a3bf40833b2,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4026722265545272143, guid: 62a84f5b0ad5d5645b67de725cbb6096,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05abbf35c0f9489409ab6a3bf40833b2, type: 3}
 --- !u!1 &5538373235122884724 stripped

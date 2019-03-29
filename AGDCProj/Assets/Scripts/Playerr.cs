@@ -6,7 +6,7 @@ public class Playerr : MonoBehaviour
 {
 
     [SerializeField] float moveSpeed = 10f;
-    [SerializeField] GameObject laserPrefab;
+   // [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
     [SerializeField] float padding = 1f;
@@ -26,11 +26,11 @@ public class Playerr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Fire();
+        //Fire();
         Move();
     }
 
-    private void Fire()
+    /*private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -50,7 +50,7 @@ public class Playerr : MonoBehaviour
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
             yield return new WaitForSeconds(projectileFiringPeriod);
         }
-    }
+    }*/
 
     private void SetUpMoveBoundaries()
     {
@@ -72,10 +72,11 @@ public class Playerr : MonoBehaviour
         transform.position = new Vector2(newXPos, newYPos);
     }
 
-    public void OnCollisionEnter2D(Collision2D col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Projectile Enemy"))
         {
+            Debug.Log("WHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY?");
             Destroy(gameObject);
         }
 

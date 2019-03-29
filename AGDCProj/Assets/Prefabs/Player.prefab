@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5651643611860637016}
   - component: {fileID: 5688556434381402996}
   - component: {fileID: 1097712793944682956}
+  - component: {fileID: 7508263727381437219}
   - component: {fileID: 1549287892693948003}
   - component: {fileID: 8635559026922898939}
   - component: {fileID: 8635559026922898940}
@@ -171,8 +172,26 @@ MonoBehaviour:
   proj: {fileID: 6004743840326193766, guid: 71fa7ebe23b6c4b44b7bdda97be9679b, type: 3}
   projSpawn: {fileID: 5796423735286039923}
   ability2: 0
-  laserPrefab: {fileID: 3319484054248417710, guid: c9470606e16498242b05852f5d1d41b3,
+  laserPrefab: {fileID: 5245505723086062135, guid: c8d7ae03acdcda44193b0364cdf32ca1,
     type: 3}
+  projectileSpeed: 10
+  projectileFiringPeriod: 0.1
+--- !u!114 &7508263727381437219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635559026922898938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba6cee25654eab449e0935002ac18cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proj: {fileID: 0}
+  projSpawn: {fileID: 5796423735286039923}
+  ability3: 0
+  laserPrefab: {fileID: 0}
   projectileSpeed: 10
   projectileFiringPeriod: 0.1
 --- !u!58 &1549287892693948003

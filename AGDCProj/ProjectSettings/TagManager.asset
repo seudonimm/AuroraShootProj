@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Projectile Player
   - Projectile Enemy
+  - Enemy3
   layers:
   - Default
   - TransparentFX
