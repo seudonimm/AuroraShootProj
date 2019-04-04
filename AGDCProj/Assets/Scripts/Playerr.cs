@@ -5,6 +5,7 @@ using UnityEngine;
 public class Playerr : MonoBehaviour
 {
 
+    [SerializeField] int remainingLife = 3;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
@@ -79,5 +80,22 @@ public class Playerr : MonoBehaviour
             Destroy(gameObject);
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
+        if (!damageDealer) { return; }
+        ProcessHit(damageDealer);
+    }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        remainingLife -= damageDealer.GetDamage();
+        damageDealer.Hit();
+        if (remainingLife <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
