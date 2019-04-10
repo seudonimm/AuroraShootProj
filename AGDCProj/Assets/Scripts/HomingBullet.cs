@@ -11,6 +11,9 @@ public class HomingBullet : MonoBehaviour {
     [SerializeField] float speed = 5f;
     [SerializeField] float rotateSpeed = 200f;
 
+    [SerializeField] float decCooldown;
+    [SerializeField] float cooldownTime;
+
     private Rigidbody2D rb;
 
 	// Use this for initialization
@@ -34,5 +37,12 @@ public class HomingBullet : MonoBehaviour {
         rb.angularVelocity = -rotateAmount * rotateSpeed;
 
         rb.velocity = -transform.up * speed;
-	}
+
+        cooldownTime = cooldownTime - decCooldown;
+
+        if (cooldownTime <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
