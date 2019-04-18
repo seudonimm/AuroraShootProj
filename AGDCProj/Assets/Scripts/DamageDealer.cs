@@ -5,6 +5,7 @@ using UnityEngine;
 public class DamageDealer : MonoBehaviour {
 
     [SerializeField] int damage = 100;
+    [SerializeField] int remainingLife = 2;
     
     public int GetDamage()
     {
@@ -18,7 +19,14 @@ public class DamageDealer : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Projectile Player"))
         {
-            Destroy(gameObject);
+            remainingLife--;
+
+
+            if (remainingLife <= 0)
+            {
+                Debug.Log("DIEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+                Destroy(gameObject);
+            }
         }
 
     }

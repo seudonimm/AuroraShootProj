@@ -9,7 +9,7 @@ public class Enemyy : MonoBehaviour
     float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
-    [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] float projectileSpeed;
     [SerializeField] GameObject projectile;
     [SerializeField] float fireRate = 0.1f;
 
@@ -39,7 +39,7 @@ public class Enemyy : MonoBehaviour
     private void Fire()
     {
         GameObject laser = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-        laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
+        laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed*Time.deltaTime);
 
     }
 

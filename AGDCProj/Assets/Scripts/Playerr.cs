@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Playerr : MonoBehaviour
 {
-
+    [SerializeField] int remainingLife = 3;
     [SerializeField] float moveSpeed = 10f;
    // [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
     [SerializeField] float padding = 1f;
+    [SerializeField] Text lives;
+    [SerializeField] Image heart1;
+    [SerializeField] Image heart2;
+    [SerializeField] Image heart3;
+
 
     Coroutine firingCoroutine;
 
@@ -26,8 +32,22 @@ public class Playerr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 hide = new Vector3(transform.position.x, transform.position.y-10, 56);
         //Fire();
         Move();
+        //lives.text = "Lives: " + remainingLife;
+        if(remainingLife == 2)
+        {
+            heart3.transform.position = hide;
+        }
+        if (remainingLife == 1)
+        {
+            heart2.transform.position = hide;
+        }
+        if (remainingLife == 0)
+        {
+            heart1.transform.position = hide;
+        }
     }
 
     /*private void Fire()
@@ -72,12 +92,18 @@ public class Playerr : MonoBehaviour
         transform.position = new Vector2(newXPos, newYPos);
     }
 
-    public void OnTriggerEnter2D(Collider2D col)
+    public void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Projectile Enemy"))
         {
-            Debug.Log("WHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY?");
-            Destroy(gameObject);
+            remainingLife--;
+
+
+            if (remainingLife <= 0)
+            {
+                Debug.Log("WHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY?");
+                Destroy(gameObject);
+            }
         }
 
     }

@@ -38,7 +38,7 @@ public class HomingBullet : MonoBehaviour {
 
         rb.velocity = -transform.up * speed;
 
-        cooldownTime = cooldownTime - decCooldown;
+        cooldownTime = (cooldownTime - decCooldown);
 
         if (cooldownTime <= 0)
         {

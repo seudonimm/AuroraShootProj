@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PathFollow : MonoBehaviour
 {
+    [SerializeField] string followerTag;
+
     //array for Nodes
     Node[] PathNode;
 
@@ -28,6 +30,8 @@ public class PathFollow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        follower = GameObject.FindGameObjectWithTag(followerTag);
+
         //adds children of game object this script is attached to to this array
         PathNode = GetComponentsInChildren<Node>();
 
@@ -41,16 +45,24 @@ public class PathFollow : MonoBehaviour
         //puts follower object at the position of first node in the array which is the beginning of the path
 
         CheckNode();
+
+        Invoke("Die", 10);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
         //will make path move somehow i'll figure it out
         time += Time.deltaTime * moveSpeed;
 
         DrawLine();
-        if((Vector2)follower.transform.position != destinationPosition)
+        if (!follower)
+        {
+            //if follower no longer exists, destroy path
+            Destroy(gameObject);
+        }else if ((Vector2)follower.transform.position != destinationPosition)
         {
             //if follower object is not at the destinationPostion vector then move it there
             follower.transform.position = Vector2.Lerp(currentPosition, destinationPosition, time);
@@ -91,7 +103,14 @@ public class PathFollow : MonoBehaviour
 
         }
     }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
 }
+
+
 
 //currentPosition = PathNode[0].transform.position;
 //follower.transform.position = currentPosition;

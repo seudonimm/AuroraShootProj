@@ -50,6 +50,15 @@ public class Beam : MonoBehaviour
             Enemy3Ability e3 = player.GetComponent<Enemy3Ability>();
             e3.ability3 = true;
         }
+
+        //Checks if beam hits Enemy4
+        if (col.gameObject.CompareTag("Enemy4"))
+        {
+            //accesses the Enemy3Ability script and changes the ability3 var to true
+            Enemy4Ability e4 = player.GetComponent<Enemy4Ability>();
+            e4.ability4 = true;
+        }
+
         Destroy(gameObject);
     }
 }

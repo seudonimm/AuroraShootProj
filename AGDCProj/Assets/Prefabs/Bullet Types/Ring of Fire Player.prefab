@@ -48,7 +48,7 @@ MonoBehaviour:
   bullet: {fileID: 9207003918497794328, guid: 3ac86c7b02b0b624c904a5c612652e9f, type: 3}
   spawn: {fileID: 800552158688614739}
   projSpeed: 50
-  bulletNum: 8
+  bulletNum: 5
   xCircleMultiplier: 1
   yCircleMultiplier: 1
   xCircleAdder: 0

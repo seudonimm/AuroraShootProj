@@ -67,4 +67,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 4026722265545272143, guid: 62a84f5b0ad5d5645b67de725cbb6096, type: 3}
   spawn: {fileID: 5245505723086062135}
-  projSpeed: -25
+  projSpeed: -100000

@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 5245505723086062135, guid: c8d7ae03acdcda44193b0364cdf32ca1,
         type: 3}
       propertyPath: m_Name
-      value: Triple Shot
+      value: Triple Shot Enemy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373734968318263047, guid: c8d7ae03acdcda44193b0364cdf32ca1,
+        type: 3}
+      propertyPath: projSpeed
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 5245505723086062133, guid: c8d7ae03acdcda44193b0364cdf32ca1,
         type: 3}

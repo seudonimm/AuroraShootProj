@@ -96,10 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7070312178585019640, guid: 5e47faab8c69f834d8872e66e98d6249, type: 3}
   spawn: {fileID: 297829809657278509}
-  projSpeed: 0
-  cooldown: 0
-  decCooldown: 0.1
-  cooldownTime: 10
+  projSpeed: 100
+  timeUntilExplode: 2
 --- !u!50 &297829809657278505
 Rigidbody2D:
   serializedVersion: 4

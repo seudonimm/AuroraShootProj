@@ -9,28 +9,21 @@ public class Explode : MonoBehaviour
 
     [SerializeField] float projSpeed;
 
-    [SerializeField] float cooldown;
-    [SerializeField] float decCooldown;
-    [SerializeField] float cooldownTime;
+    [SerializeField] float timeUntilExplode;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        Invoke("Fire", timeUntilExplode);
         //Fire();
     }
 
     // Update is called once per frame
     void Update()
     {
-        cooldownTime = cooldownTime - decCooldown;
 
-        if(cooldownTime <= 0)
-        {
-            Fire();
-            Destroy(gameObject);
-        }
     }
+
 
     void Fire()
     {
@@ -38,6 +31,7 @@ public class Explode : MonoBehaviour
 
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projSpeed) * Time.deltaTime;
 
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D col)

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+  remainingLife: 2
 --- !u!1001 &7204716688407823775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33,12 +34,12 @@ PrefabInstance:
     - target: {fileID: 568488561696422435, guid: 538ecacb884ee8f42afd8c128ba09440,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.6506066
       objectReference: {fileID: 0}
     - target: {fileID: 568488561696422435, guid: 538ecacb884ee8f42afd8c128ba09440,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.4850004
       objectReference: {fileID: 0}
     - target: {fileID: 568488561696422435, guid: 538ecacb884ee8f42afd8c128ba09440,
         type: 3}
@@ -85,31 +86,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5077525829238602226, guid: 538ecacb884ee8f42afd8c128ba09440,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901719442402179706, guid: 538ecacb884ee8f42afd8c128ba09440,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
+    - target: {fileID: 2007302869, guid: 538ecacb884ee8f42afd8c128ba09440, type: 3}
+      propertyPath: projectileSpeed
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 2007302869, guid: 538ecacb884ee8f42afd8c128ba09440, type: 3}
       propertyPath: projectile
       value: 
       objectReference: {fileID: 3492397175011666911, guid: 2a65df78cb4eb3b47b0d16e3ab94043f,
         type: 3}
-    - target: {fileID: 941212750713242786, guid: 538ecacb884ee8f42afd8c128ba09440,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.017205715
+    - target: {fileID: 2007302869, guid: 538ecacb884ee8f42afd8c128ba09440, type: 3}
+      propertyPath: fireRate
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 941212750713242786, guid: 538ecacb884ee8f42afd8c128ba09440,
         type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d8b1a7bfc906589429afec42cdf24e6a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 538ecacb884ee8f42afd8c128ba09440, type: 3}
 --- !u!1 &7352701844744616657 stripped

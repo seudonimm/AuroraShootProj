@@ -82,6 +82,12 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 3787845318753008460}
+    - target: {fileID: 297829809657278506, guid: 825ddeceb2479e847b8492b133a87fa2,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 7674997736328676912, guid: a21fbf4ca97b45a47ac0d6ab59b26c14,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 825ddeceb2479e847b8492b133a87fa2, type: 3}
 --- !u!1 &3787845318753008460 stripped

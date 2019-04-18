@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 297829809657278509, guid: 825ddeceb2479e847b8492b133a87fa2, type: 3}
   spawn: {fileID: 7413924200281950482}
-  projSpeed: -50
+  projSpeed: -100
 --- !u!50 &6679218079805370252
 Rigidbody2D:
   serializedVersion: 4
