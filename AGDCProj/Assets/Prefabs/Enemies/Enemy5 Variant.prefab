@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+  remainingLife: 2
+  scoreValue: 0
+  score: {fileID: 3110715832500047327, guid: bb8314bf4f22f1f44b3c71b27403e6f5, type: 3}
 --- !u!1001 &3987614239218512873
 PrefabInstance:
   m_ObjectHideFlags: 0

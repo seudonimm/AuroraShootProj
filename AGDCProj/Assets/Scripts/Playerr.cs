@@ -7,7 +7,7 @@ public class Playerr : MonoBehaviour
 {
     [SerializeField] int remainingLife = 3;
     [SerializeField] float moveSpeed = 10f;
-   // [SerializeField] GameObject laserPrefab;
+    // [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
     [SerializeField] float padding = 1f;
@@ -16,6 +16,7 @@ public class Playerr : MonoBehaviour
     [SerializeField] Image heart2;
     [SerializeField] Image heart3;
 
+    Collider2D collide;
 
     Coroutine firingCoroutine;
 
@@ -27,16 +28,17 @@ public class Playerr : MonoBehaviour
     void Start()
     {
         SetUpMoveBoundaries();
+        collide = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 hide = new Vector3(transform.position.x, transform.position.y-10, 56);
+        Vector3 hide = new Vector3(transform.position.x, transform.position.y - 10, 56);
         //Fire();
         Move();
         //lives.text = "Lives: " + remainingLife;
-        if(remainingLife == 2)
+        /*if(remainingLife == 2)
         {
             heart3.transform.position = hide;
         }
@@ -47,7 +49,7 @@ public class Playerr : MonoBehaviour
         if (remainingLife == 0)
         {
             heart1.transform.position = hide;
-        }
+        }*/
     }
 
     /*private void Fire()
@@ -94,17 +96,45 @@ public class Playerr : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D col)
     {
+        Vector3 hide = new Vector3(transform.position.x, transform.position.y - 10, 56);
+
         if (col.gameObject.CompareTag("Projectile Enemy"))
         {
             remainingLife--;
 
+            if (remainingLife == 2)
+            {
+                collide.enabled = !collide.enabled;
+                Invoke("Invuln", 3);
 
+                heart3.transform.position = hide;
+            }
+            if (remainingLife == 1)
+            {
+                collide.enabled = !collide.enabled;
+                Invoke("Invuln", 3);
+
+                heart2.transform.position = hide;
+            }
             if (remainingLife <= 0)
             {
+                collide.enabled = !collide.enabled;
+                Invoke("Invuln", 3);
+
+                heart1.transform.position = hide;
                 Debug.Log("WHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY?");
                 Destroy(gameObject);
             }
         }
 
     }
+
+    public void Invuln()
+    {
+        collide.enabled = !collide.enabled;
+        Debug.Log("collider enabled");
+    }
 }
+
+
+

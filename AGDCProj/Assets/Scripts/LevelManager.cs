@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject spawnGroup6;
     [SerializeField] GameObject spawnGroup7;
     [SerializeField] GameObject spawnGroup8;
+
+    public Text scoreTxt;
+    public int score;
 
 
     // Start is called before the first frame update
@@ -70,7 +74,8 @@ public class LevelManager : MonoBehaviour
             spawner = spawnGroup8;
 
         }
-        
+
+        scoreTxt.text = "SCORE: " + score;
     }
 
     void Spawn()
