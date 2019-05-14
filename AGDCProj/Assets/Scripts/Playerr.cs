@@ -16,6 +16,8 @@ public class Playerr : MonoBehaviour
     [SerializeField] Image heart2;
     [SerializeField] Image heart3;
 
+    public GameObject back;
+
     Collider2D collide;
 
     Coroutine firingCoroutine;
@@ -29,6 +31,7 @@ public class Playerr : MonoBehaviour
     {
         SetUpMoveBoundaries();
         collide = GetComponent<Collider2D>();
+
     }
 
     // Update is called once per frame
@@ -123,6 +126,8 @@ public class Playerr : MonoBehaviour
 
                 heart1.transform.position = hide;
                 Debug.Log("WHYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY?");
+                GameOver b1 = back.GetComponent<GameOver>();
+                b1.restart = true;
                 Destroy(gameObject);
             }
         }

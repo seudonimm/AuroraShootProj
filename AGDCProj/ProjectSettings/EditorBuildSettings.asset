@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Alpha Scene.unity
     guid: ba9f2b096dc451348a71aea559f68aaf
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 6dc5544b4e176d04da0d76fe75ecea23
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 517d0801b58dc154ab1bad02fdd69fca
+  - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: d1a7e731986aa884d8409b14aaccf77c
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8193dde8f652efd46b37b807f3c1ee15
   m_configObjects: {}

@@ -83,6 +83,11 @@ public class LevelManager : MonoBehaviour
         Instantiate(spawner, spawner.transform.position, spawner.transform.rotation);
         counter++;
 
+        if(counter == 8)
+        {
+            counter = 1;
+        }
+
 
     }
 }
